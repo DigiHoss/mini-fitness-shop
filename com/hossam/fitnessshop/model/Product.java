@@ -2,16 +2,16 @@ package com.hossam.fitnessshop.model;
 
 public class Product {
 
-  private int id;
+  private final int id;
   private String name;
   private String description;
   private double price;
 
-  public Product(String name, String description, double price) {
+  public Product(int id, String name, String description, double price) {
     this.name = name;
     this.description = description;
     this.price = price;
-    this.id = 0; // TODO build the logic of incrementing the id
+    this.id = id;
   }
 
   public int getId() {
