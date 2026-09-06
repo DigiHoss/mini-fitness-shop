@@ -19,11 +19,28 @@ public abstract class User {
     return this.username;
   }
 
+  public String getPassword() {
+    return this.password;
+  }
+
   public void setPassword(String password) {
     this.password = password;
   }
 
+  public void setFullName(String fullName) {
+    this.fullName = fullName;
+  }
+
   public boolean isPasswordMatch(String candidatePassword) {
     return this.password.equals(candidatePassword);
+  }
+
+  public abstract void runSession();
+
+  public abstract String getRole();
+
+  @Override
+  public String toString() {
+    return "Full name : " + this.fullName + " Username : " + this.username + "\n";
   }
 }
