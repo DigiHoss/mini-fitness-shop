@@ -36,14 +36,7 @@ public class Cart {
     }
     StringBuilder sb = new StringBuilder();
     for (Product product : this.products) {
-      sb.append(
-          "id : "
-              + product.getId()
-              + " name : "
-              + product.getName()
-              + " price : "
-              + product.getPrice()
-              + "\n");
+      sb.append(product.toString());
     }
     return sb.toString();
   }
