@@ -47,9 +47,9 @@ public class Customer extends User {
   public void runSession(Scanner sc, Catalog catalog, UserRepository userRepository) {
     // System.out.println("customer session active");
     int choice = 0;
+    System.out.println("login in as a Customer");
+    System.out.println("Full name: " + super.getFullName());
     do {
-      System.out.println("login in as a Customer");
-      System.out.println("Full name: " + super.getFullName());
       System.out.println("-----------------------------------");
       System.out.println("Menu :");
       System.out.println("1. View catalog products");
