@@ -2,6 +2,7 @@ package com.hossam.fitnessshop.model;
 
 import java.util.Collections;
 import java.util.List;
+import com.hossam.fitnessshop.repository.ProductRepository;
 
 public class Catalog {
   private List<Product> products;
