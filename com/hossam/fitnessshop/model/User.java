@@ -1,5 +1,8 @@
 package com.hossam.fitnessshop.model;
 
+import com.hossam.fitnessshop.repository.UserRepository;
+import java.util.Scanner;
+
 public abstract class User {
   private String fullName;
   private String username;
@@ -35,12 +38,12 @@ public abstract class User {
     return this.password.equals(candidatePassword);
   }
 
-  public abstract void runSession();
+  public abstract void runSession(Scanner sc, Catalog catalog, UserRepository userRepository);
 
   public abstract String getRole();
 
   @Override
   public String toString() {
-    return "Full name : " + this.fullName + " Username : " + this.username + "\n";
+    return "Full name : " + this.fullName + "\nUsername : " + this.username + "\n";
   }
 }
